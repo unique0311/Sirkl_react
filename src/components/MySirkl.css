@@ -1,0 +1,104 @@
+.mysirkl {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+  height: 790px;
+  flex-direction: column;
+}
+
+.mysirkl__title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mysirkl__title__left {
+  font-family: 'Roboto-medium';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mysirkl__title__right {
+  width: 16.33px;
+  height: 16.33px;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mysirkl__data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.mysirkl::-webkit-scrollbar-track
+{
+	background-color: #f4f4f4;
+}
+
+.mysirkl::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #f4f4f4;
+}
+
+.mysirkl::-webkit-scrollbar-thumb
+{
+	background-color: #82828242;
+}
+
+.mysirkl__cross {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.mysirkl__cross__title {
+  font-family: 'Gilory';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 15px;
+}
+
+.mysirkl__cross__main {
+  width: 98%;
+  height: 1px;
+  background: #828282;
+  opacity: 0.2;
+}
+
+.mysirkl__favorite {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 1650px) {
+  .mysirkl {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    height: 718px;
+    flex-direction: column;
+}
+
+}

@@ -1,0 +1,242 @@
+.compose {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.compose__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compose__title__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.backimg__setting {
+  width: 21.33px;
+  height: 21.33px;
+  margin-right: 20.33px;
+}
+
+.compose__left__text {
+  font-family: 'Roboto-medium';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.compose__title__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recycleimg__setting {
+  width: 23.33px;
+  height: 23.33px;
+}
+
+.threeimg__setting {
+  width: 4.67px;
+  height: 21px;
+  margin-left: 34px;
+  margin-right: 35px;
+}
+
+.compose__sendto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.compose__sendto__text {
+  font-family: 'Roboto-medium';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.compose__sendto__input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 98%;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  background-image: url('../assets/images/contact.png');
+  background-position: 13px 13px;
+  background-size: 18px 20px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 45px;
+  font-family: 'Gilory';
+}
+
+.compose__sendto__input:focus {
+  outline: none;
+}
+
+.compose__sendto__search {
+  width: 100%;
+}
+
+.compose__sendto__select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #82828242;
+}
+
+.compose__sendto__one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  width: 132px;
+  height: 45px;
+  background: #00CB7D;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.compose__one__text {
+  font-family: 'Gilory';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.divideimg__setting {
+  width: 13.26px;
+  height: 13.26px;
+  margin-left: 10.87px;
+}
+
+.compose__sendto__sentence {
+  margin-top: 10px;
+  border: none;
+  width: 100%;
+  height: 400px;
+  font-size: 16px;
+  font-family: 'Gilory';
+}
+
+.compose__sendto__sentence:focus {
+  outline: none;
+}
+
+.compose__bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.compose__bottom__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  background: linear-gradient(91.24deg, #1DE99B 0.26%, #0063FB 99.58%);
+  border-radius: 15px;
+  font-family: 'Gilory';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 20px;
+  margin-right: 43.25px;
+}
+
+.compose__botton__attachfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.plusimgs__setting {
+  width: 17.5px;
+  height: 17.5px;
+  margin-right: 25px;
+}
+
+.attachimg__setting {
+  width: 22.01px;
+  height: 23.76px;
+  margin-right: 25px;
+}
+
+.galleryimg__setting {
+  width: 22px;
+  height: 22px;
+  margin-right: 25px;
+}
+
+.smileimg__settings {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 1162px) {
+  .backimg__setting {
+    width: 18px;
+    height: 18px;
+    margin-right: 20.33px;
+  }
+
+  .compose__left__text {
+    font-size: 22px;
+  }
+
+  .compose__sendto__one {
+    width: 80px;
+    height: 38px;
+  }
+
+  .compose__one__text {
+    font-size: 15px;
+  }
+
+  .divideimg__setting {
+    width: 11px;
+    height: 11px;
+    margin-left: 9px;
+    transition: all 0.3s ease-in-out;
+  }
+
+}

@@ -1,0 +1,157 @@
+.recievemessage {
+  padding: 15px 20px;
+  background: #ffffff;
+  backdrop-filter: blur(2px);
+  border-radius: 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 65%;
+}
+
+.recieve__message {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.send__message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.recievemessage__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.sending__message__address {
+  font-family: 'Gilory';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #0373EE;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.recieve__message__detail {
+  font-family: 'Gilory';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.recievemessage__date {
+  font-family: 'BR Firma';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  color: #828282;
+}
+
+.sendmessage { 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15px 20px;
+  background: #ECFFF8;
+  border: 1px solid rgba(0, 203, 125, 0.2);
+  border-radius: 15px 0px 15px 15px;
+  max-width: 65%;
+}
+
+.sending__message {
+  font-family: 'Gilory';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.sending__message__state {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sending__message__time {
+  font-family: 'BR Firma';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  color: #828282;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.sending__message__Status {
+  width: 16.42px;
+  height: 9.02px;
+}
+
+.crosstime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%
+}
+
+.crosstime__left {
+  width: 45%;
+  height: 2px;
+  background: #9ba0a5;
+  opacity: 0.2;
+}
+
+.crosstime__medium {
+  font-family: 'BR Firma';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

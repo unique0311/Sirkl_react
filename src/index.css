@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter/static/Inter-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilory-Bold';
+  src: local('Gilory-Bold'), url(./fonts/Gilroy/Radomir\ Tinkov\ -\ Gilroy-ExtraBold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilory';
+  src: local('Gilory'), url(./fonts/Gilroy/Radomir\ Tinkov\ -\ Gilroy-Light.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-medium';
+  src: local('Roboto-medium'), url(./fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BR Firma';
+  src: local('BR Firma'), url(./fonts/BR-Firma/BR\ Firma\ Regular.otf) format('truetype');
+}
