@@ -1,5 +1,5 @@
 import './Login.css';
-import logoimg_1 from '../assets/images/main_2.png';
+import logoimg_1 from '../assets/images/logo.png';
 import logoimg_2 from '../assets/images/main_3.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';

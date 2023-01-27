@@ -1,10 +1,14 @@
 import './MessageDetail.css';
 
+import { useSelector } from 'react-redux';
 import checkedimg from '../assets/images/checked.png';
 
 export const RecieveMessage = () => {
+  const mode = useSelector(state => state.supply.value);
+
   return (
-    <div className='recieve__message'>
+    <div className='recieve__message' style={mode ? { "--recieve-message-bg": "var(--recieve-message-bg-dm)", "--recieve-message-text": "var(--recieve-message-text-dm)" } :
+      { "--recieve-message-bg": "var(--recieve-message-bg-lm)", "--recieve-message-text": "var(--recieve-message-text-lm)" }}>
       <div className='recievemessage'>
         <div className='recievemessage__detail'>
           <p className='sending__message__address'>8x9Fx224</p>
@@ -17,8 +21,11 @@ export const RecieveMessage = () => {
 };
 
 export const SendMessage = () => {
+  const mode = useSelector(state => state.supply.value);
+
   return (
-    <div className='send__message'>
+    <div className='send__message' style={mode ? {"--send-message-bg" : "var(--send-message-bg-dm)", "--recieve-message-text": "var(--recieve-message-text-dm)"}
+      : {"--send-message-bg": "var(--send-message-bg-lm)", "--recieve-message-text": "var(--recieve-message-text-lm)" }}>
       <div className='sendmessage'>
         <p className='sending__message'>Could you make sure to involve the Head of R&D here?</p>
         <div className='sending__message__state'>
@@ -31,8 +38,10 @@ export const SendMessage = () => {
 };
 
 export const CrossTime = () => {
+  const mode = useSelector(state => state.supply.value);
+
   return (
-    <div className='crosstime'>
+    <div className='crosstime'style={mode ? {"--recieve-message-text" : "var(--recieve-message-text-dm)"}: {"--recieve-message-text": "var(--recieve-message-text-lm)"}}>
       <div className='crosstime__left' />
       <p className='crosstime__medium'>25 June</p>
       <div className='crosstime__left' />

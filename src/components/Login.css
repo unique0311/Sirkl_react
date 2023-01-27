@@ -110,7 +110,7 @@
   color: var(--subtitle);
 }
 
-.info__button {
+/* .info__button {
   background: linear-gradient(91.24deg, #1DE99B 0.26%, #0063FB 99.58%);
   color: #fff;
   text-decoration: none;
@@ -119,8 +119,26 @@
   line-height: 24.18px;
   padding: 23px 37.5px;
   border-radius: 15px;
+} */
+
+.info__button {
+  background: linear-gradient(90deg, #1de99b 0%, #0063fb 50%, #0063fb 100%);
+  background-size: 200%;
+  border-radius: 15px;
+  color: #fff;
+  font-family: Gilory;
+  font-size: 20px;
+  line-height: 24.18px;
+  padding: 23px 37.5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.4s ease-out;
 }
 
+.info__button:hover {
+  background-position: 100% 100%;
+  transition: all 0.4s ease-out;
+}
 
 @media (max-width: 1250px) {
   

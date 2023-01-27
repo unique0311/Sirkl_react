@@ -1,9 +1,16 @@
+:root {
+  --mysirkl-title-dm: #ffffff;
+  --mysirkl-title-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --mysirkl-scroll-lm: #f4f4f4;
+  --mysirkl-scroll-dm: #00000033;
+}
+
 .mysirkl {
   display: flex;
   align-items: center;
   width: 100%;
   overflow: auto;
-  height: 790px;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -20,7 +27,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--mysirkl-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -29,7 +36,7 @@
 .mysirkl__title__right {
   width: 16.33px;
   height: 16.33px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--mysirkl-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -44,13 +51,13 @@
 
 .mysirkl::-webkit-scrollbar-track
 {
-	background-color: #f4f4f4;
+	background-color: var(--mysirkl-scroll);
 }
 
 .mysirkl::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #f4f4f4;
+	background-color: var(--mysirkl-scroll);
 }
 
 .mysirkl::-webkit-scrollbar-thumb
@@ -71,7 +78,7 @@
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--mysirkl-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,8 +104,18 @@
     align-items: center;
     width: 100%;
     overflow: auto;
-    height: 718px;
     flex-direction: column;
+  }
 }
 
+@media (max-width: 540px) {
+  .mysirkl__title__left {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .mysirkl__title__right {
+    width: 2.67px;
+    height: 16px;
+  }
 }

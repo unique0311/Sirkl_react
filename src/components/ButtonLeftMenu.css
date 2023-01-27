@@ -7,15 +7,15 @@
   --button-bg-lm: #fff;
 }
 
-.buttonleft {
+.buttonleft__menu {
   display: flex;
   flex-direction: column;
-  padding-right: 12.1%;
+  padding-right: 45px;
+  padding-left: 45px;
   height: 360px;
-  min-width: 100px;
 }
 
-.compose__button {
+.compose__button__menu {
   width: 100%;
   height: 60px;
   background: linear-gradient(91.24deg, #1DE99B 0.26%, #0063FB 99.58%);
@@ -33,13 +33,13 @@
   text-decoration: none;
 }
 
-.compose__vector {
+.compose__vector__menu {
   height: 23.3px;
   width: 21px;
   padding-right: 13.5px;
 }
 
-.inbox__button {
+.inbox__button__menu {
   width: 100%;
   height: 60px;
   display: flex;
@@ -56,12 +56,12 @@
   margin-top: 30px;
 }
 
-.inbox__vector {
+.inbox__vector__menu {
   padding-left: 7%;
   padding-right: 6%;
 }
 
-.button__badge {
+.button__badge__menu {
   width: 40px;
   height: 25px;
   border-radius: 40px;
@@ -74,7 +74,7 @@
   margin-left: 40%;
 }
 
-.group__call__button {
+.group__call__button__menu {
   width: 100%;
   height: 60px;
   background: var(--call-button);
@@ -92,23 +92,23 @@
   margin-top: 10px;
 }
 
-.group__call__vector {
+.group__call__vector__menu {
   padding-left: 7%;
   padding-right: 6%;
 }
 
-.logo__vector {
+.logo__vector__menu {
   width: 28px;
   height: 28px;
   padding-left: 7%;
   padding-right: 6%;
 }
 
-.buttonleft .active{
+.buttonleft__menu .active{
   background: var(--button-bg);
 }
 
-.inbox__button:focus {
+.inbox__button__menu:focus {
   width: 100%;
   height: 60px;
   background: var(--button-bg);
@@ -125,7 +125,7 @@
   margin-top: 30px;
 }
 
-.group__call__button:focus {
+.group__call__button__menu:focus {
   width: 100%;
   height: 60px;
   background: var(--button-bg);
@@ -143,54 +143,27 @@
 }
 
 
-@media (max-width: 1480px) {
-  .button__badge {
-    width: 40px;
-    height: 25px;
-    border-radius: 40px;
-    background-color: #00cb7d;
-    font-family: 'Gilory';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 25%;
-    transition: 0.4s all ease-in-out;
+@media (max-width: 460px) {
+  .buttonleft__menu {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .compose__button__menu {
+    border-radius: 0px;
+  }
+
+  .inbox__button__menu {
+    border-radius: 0px;
+  }
+
+  .group__call__button__menu {
+    border-radius: 0px;
   }
 }
 
-@media (max-width: 1162px) {
-  .compose__display {
-    display: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .button__badge {
-    display: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .compose__button {
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(91.24deg, #1DE99B 0.26%, #0063FB 99.58%);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-family: 'Gilory';
-    position: relative;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .compose__vector {
-    height: 23.3px;
-    width: 21px;
-    padding-right: 0px;
-    transition: all 0.3s ease-in-out;
+@media (max-width: 360px) {
+  .button__badge__menu {
+    margin-left: 30px;
   }
 }

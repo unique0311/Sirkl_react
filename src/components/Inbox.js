@@ -1,6 +1,8 @@
 import './Inbox.css';
 import { useState } from 'react';
 import threeicon from '../assets/images/three.png';
+import threedarkicon from '../assets/images/threedark.png';
+import downdarkicon from '../assets/images/downdark.png';
 import downicon from '../assets/images/down.png';
 
 import nft1 from '../assets/images/nft_1.png';
@@ -12,9 +14,12 @@ import sendimg from '../assets/images/send.png';
 
 import { Inbox_1, Inbox_2 } from './Datas';
 
-import {RecieveMessage, SendMessage, CrossTime} from './MessageDetail';
+import { RecieveMessage, SendMessage, CrossTime } from './MessageDetail';
+
+import { useSelector } from 'react-redux';
 
 const Inbox = () => {
+  const mode = useSelector(state => state.supply.value);
   const [dialogview, setDialogview] = useState(false);
 
   const messageDialog = () => {
@@ -22,21 +27,22 @@ const Inbox = () => {
   }
 
   return (
-    <div className='inbox'>
+    <div className='inbox' style={mode ? { "--inbox-text": "var(--inbox-text-dm)", "--inbox-medium-bg": "var(--inbox-medium-bg-dm)", "--dialog-main-bg": "var(--dialog-main-bg-dm)", "--dialog-input-bg": "var(--dialog-input-bg-dm", "--dialog-input-textcolor": "var(--dialog-input-textcolor-dm" }
+    : { "--inbox-text": "var(--inbox-text-lm)", "--inbox-medium-bg": "var(--inbox-medium-bg-lm)", "--dialog-main-bg": "var(--dialog-main-bg-lm)", "--dialog-input-bg": "var(--dialog-input-lm)", "--dialog-input-textcolor": "var(--dialog-input-textcolor-lm" }}>
       {
         !dialogview ? (
           <div className='inbox__main__one'>
             <div className='inbox__title'>
               <div className='inbox__title__left'>
                 <input type="checkbox" className="inbox__left__checkbox" />
-                <img src={downicon} className="inbox__left__pic" />
+                <img src={mode? downdarkicon: downicon} className="inbox__left__pic" />
                 <p className='inbox__left__text'>Inbox</p>
               </div>
               <div className='inbox__title__medium'>
                 <div className='inbox__medium__friend'>Friends</div>
                 <div className='inbox__medium__others'>Others</div>
               </div>
-              <img src={threeicon} className="inbox__title__right" />
+              <img src={mode? threedarkicon : threeicon} className="inbox__title__right" />
             </div>
             <div className='inbox__data'>
               {/* One block::start */}
@@ -60,14 +66,14 @@ const Inbox = () => {
                 <div className='inbox__title'>
                   <div className='inbox__title__left'>
                     <input type="checkbox" className="inbox__left__checkbox" />
-                    <img src={downicon} className="inbox__left__pic" />
+                    <img src={mode? downdarkicon: downicon} className="inbox__left__pic" />
                     <p className='inbox__left__text'>Inbox</p>
                   </div>
                   <div className='inbox__title__medium__two'>
                     <div className='inbox__medium__friend'>Friends</div>
                     <div className='inbox__medium__others'>Others</div>
                   </div>
-                  <img src={threeicon} className="inbox__title__right" />
+                  <img src={mode? threedarkicon: threeicon} className="inbox__title__right" />
                 </div>
                 <div className='inbox__data'>
                   {/* One block::start */}
@@ -93,7 +99,7 @@ const Inbox = () => {
                       <p className="dialog__header__text2">Online</p>
                     </div>
                   </div>
-                  <img src={threeicon} className="dialog__header__three" />
+                  <img src={mode? threedarkicon: threeicon} className="dialog__header__three" />
                 </div>
                 <div className='message__dialog__main'>
                   <div className='message__dialog__hmain'>

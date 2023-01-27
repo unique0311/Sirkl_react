@@ -1,7 +1,17 @@
+:root {
+  --compose-text-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --compose-text-dm: #ffffff;
+  --compose-bg-lm: #ffffff;
+  --compose-bg-dm: #2D465E80;
+  --compose-input-color-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --compose-input-color-dm: #ffffff;
+}
+
 .compose {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .compose__title {
@@ -28,7 +38,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--compose-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +76,7 @@
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--compose-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -83,7 +93,7 @@
   gap: 15px;
   width: 98%;
   height: 50px;
-  background: #FFFFFF;
+  background: var(--compose-bg);
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 15px;
   background-image: url('../assets/images/contact.png');
@@ -92,6 +102,7 @@
   background-repeat: no-repeat;
   padding: 12px 20px 12px 45px;
   font-family: 'Gilory';
+  color: var(--compose-input-color);
 }
 
 .compose__sendto__input:focus {
@@ -147,7 +158,9 @@
   width: 100%;
   height: 400px;
   font-size: 16px;
+  background: var(--compose-bg);
   font-family: 'Gilory';
+  color: var(--compose-input-color);
 }
 
 .compose__sendto__sentence:focus {
@@ -179,6 +192,7 @@
   color: #FFFFFF;
   margin-top: 20px;
   margin-right: 43.25px;
+  cursor: pointer;
 }
 
 .compose__botton__attachfile {
@@ -193,23 +207,27 @@
   width: 17.5px;
   height: 17.5px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .attachimg__setting {
   width: 22.01px;
   height: 23.76px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .galleryimg__setting {
   width: 22px;
   height: 22px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .smileimg__settings {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
 @media (max-width: 1162px) {
@@ -239,4 +257,86 @@
     transition: all 0.3s ease-in-out;
   }
 
+}
+
+@media (max-width: 420px) {
+  .backimg__setting {
+    width: 15px;
+    height: 15px;
+    margin-right: 15.33px;
+  }
+
+  .compose__left__text {
+    font-size: 18px;
+  }
+
+  .recycleimg__setting {
+    width: 16.33px;
+    height: 16.33px;
+  }
+
+  .threeimg__setting {
+    width: 3.67px;
+    height: 17px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .compose__sendto__text {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .compose__sendto__one {
+    width: 60px;
+    height: 30px;
+    padding: 0px 10px;
+    border-radius: 15px;
+  }
+
+  .compose__one__text {
+    font-size: 12px;
+  }
+
+  .divideimg__setting {
+    width: 9px;
+    height: 9px;
+    margin-left: 6px;
+  }
+
+  .compose__bottom__button {
+    margin-bottom: 10px;
+    width: 120px;
+    height: 45px;
+    border-radius: 9px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+
+  .compose__botton__attachfile {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 360px) {
+  .compose__sendto__sentence {
+    height: 380px;
+  }
+
+  .compose__bottom__button {
+    margin-right: 25px;
+  }
+
+  .plusimgs__setting {
+    margin-right: 15px;
+  }
+
+  .attachimg__setting {
+    margin-right: 15px;
+  }
+
+  .galleryimg__setting {
+    margin-right: 15px;
+  }
 }

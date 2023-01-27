@@ -1,7 +1,21 @@
+:root {
+  --inbox-text-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --inbox-text-dm: #ffffff;
+  --inbox-medium-bg-lm: #f2f6fd;
+  --inbox-medium-bg-dm: #2D465E80;
+  --dialog-main-bg-lm: #F2F6FD;
+  --dialog-main-bg-dm: #00000033;
+  --dialog-input-bg-lm: #ffffff;
+  --dialog-input-bg-dm: #FFFFFF0D;
+  --dialog-input-textcolor-lm: black;
+  --dialog-input-textcolor-dm: #ffffff;
+}
+
 .inbox {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .inbox__main__two {
@@ -9,17 +23,22 @@
   flex-direction: column;
   align-items: center;
   width: 40%; 
+  height: 100%;
   border-right: 1px solid #82828242;
 }
 
 .inbox__main__one {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .inbox__main__other {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
 }
 
 .inbox__title {
@@ -32,23 +51,24 @@
 }
 
 .inbox__data {
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   overflow: auto;
-  height: 710px;
 }
 
 
 .inbox__data::-webkit-scrollbar-track
 {
-	background-color: #f4f4f4;
+	background-color: var(--dialog-main-bg);
 }
 
 .inbox__data::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #f4f4f4;
+	background-color: var(--dialog-main-bg);
 }
 
 .inbox__data::-webkit-scrollbar-thumb
@@ -75,7 +95,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -93,7 +113,7 @@
   padding: 0px;
   width: 335px;
   height: 55px;
-  background: #f2f6fd;
+  background: var(--inbox-medium-bg);
   border-radius: 10px;
 }
 
@@ -105,7 +125,7 @@
   padding: 0px;
   width: 335px;
   height: 55px;
-  background: #f2f6fd;
+  background: var(--inbox-medium-bg);
   border-radius: 10px;
 }
 
@@ -151,13 +171,6 @@
   /* TODO */
 }
 
-.inbox__data {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
 .inbox__data__info {
   display: flex;
   flex-direction: row;
@@ -167,6 +180,7 @@
   border-bottom: 1px solid #82828242;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .inbox__data__info:last-child {
@@ -183,6 +197,7 @@
   border-bottom: 1px solid #82828242;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .inbox__data__infoleft {
@@ -197,7 +212,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -234,7 +249,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -261,7 +276,7 @@
   font-size: 18px;
   line-height: 21px;
   width: 200px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -287,6 +302,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
+  height: 100%;
   align-items: center;
 }
 
@@ -324,7 +340,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -351,20 +367,20 @@
 
 .message__dialog__main {
   overflow: auto;
-  height: 630px;
+  height: 100%;
   width: 100%;
-  background: #f4f4f4;
+  background: var(--dialog-main-bg);
 }
 
 .message__dialog__main::-webkit-scrollbar-track
 {
-	background-color: #f4f4f4;
+	background-color: var(--dialog-main-bg);
 }
 
 .message__dialog__main::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #f4f4f4;
+	background-color: var(--dialog-main-bg);
 }
 
 .message__dialog__main::-webkit-scrollbar-thumb
@@ -389,7 +405,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 20px;
+  padding-left: 15px;
+  padding-bottom: 15px;
   padding-top:20px;
 }
 
@@ -402,7 +419,7 @@
   padding: 0px 25px;
   width: 90%;
   height: 60px;
-  background: #FFFFFF;
+  background: var(--dialog-input-bg);
   border: 1px solid rgba(155, 160, 165, 0.5);
   border-radius: 13.3333px;
 }
@@ -411,6 +428,8 @@
   font-size: 16px;
   border: none;
   width: 80%;
+  background: none;
+  color: var(--dialog-input-textcolor);
 }
 
 .dialog__input__info:focus {
@@ -536,7 +555,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--inbox-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -566,6 +585,13 @@
     height: 55px;
     transition: all 0.3s ease-in-out;
   }
+
+  .inbox__data__infopic {
+    width: 4.67px;
+    height: 21px;
+    margin-right: 12px;
+    margin-left: 17px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -577,7 +603,13 @@
   .inbox__message__dialog {
     transition: all 0.3s ease-in-out;
     width: 100%;
-    
+  }
+
+  .inbox__data__infopic {
+    width: 4.67px;
+    height: 21px;
+    margin-right: 9px;
+    margin-left: 14px;
   }
 }
 
@@ -603,6 +635,20 @@
   .inbox__data__text2 {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  
+  .messageimg__setting {
+    width: 23.33px;
+    height: 22.75px;
+    margin-left: 20px;
+    margin-right: 24px;
+  }
+
+  .inbox__data__infopic {
+    width: 4.67px;
+    height: 21px;
+    margin-right: 7px;
+    margin-left: 12px;
   }
 }
 
@@ -635,7 +681,34 @@
     transition: all 0.3s ease-in-out;
     padding-bottom: 5px;
   }
+  
+  .messageimg__setting {
+    width: 23.33px;
+    height: 22.75px;
+    margin-left: 15px;
+    margin-right: 19px;
+  }
 
+  .inbox__data__right {
+    position: relative;
+  }
+
+  .inbox__data__badge {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    gap: 0px;
+    width:20px;
+    height: 14px;
+    border-radius: 35px;
+  }
+
+  .badge__format {
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -655,5 +728,214 @@
   .message__dialog__bottom {
     padding-left: 10px;
   }
+
+  .incoming__text {
+    display: none;
+  }
+
+  .missed__text {
+    display: none;
+  }
+
+  
+  .messageimg__setting {
+    width: 23.33px;
+    height: 22.75px;
+    margin-left: 10px;
+    margin-right: 14px;
+  }
+
+  .inbox__data__infopic {
+    width: 4.67px;
+    height: 21px;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
 }
 
+@media (max-width: 540px) {
+  .inbox__data__pic {
+    width: 35px;
+    height: 35px;
+    margin-left: 0.5px;
+    margin-right: 10px;
+  }
+
+  .inbox__data__text1 {
+    font-size: 12px;
+  }
+
+  .inbox__data__text2  {
+    font-size: 12px;
+  }
+
+  .inbox__data__inforight {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .inbox__data__infopic {
+    width: 2.67px;
+    height: 13px;
+    margin-right: 4px;
+    margin-left: 0px;
+  }
+
+  .phoneimg__setting {
+    width: 15px;
+    height: 15px;
+  }
+
+  .messageimg__setting {
+    width: 19.33px;
+    height: 18.75px;
+    margin-left: 5px;
+    margin-right: 9px;
+  }
+
+}
+
+@media (max-width: 460px) {
+  .inbox__left__pic {
+    width: 10px;
+    height: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .inbox__left__text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .inbox__title__medium {
+    width: 110px;
+    height: 30px;
+  }
+
+  .inbox__medium__friend {
+    height: 28px;
+    border-radius: 7px;
+    font-size: 13px;
+  }
+
+  .inbox__medium__others {
+    height: 28px;
+    border-radius: 7px;
+    font-size: 13px;
+  }
+
+  .inbox__title__right {
+    width: 3.67px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  .inbox__data__pic {
+    width: 30px;
+    height: 30px;
+    margin-left: 2.5px;
+    margin-right: 5px;
+  }
+
+  .inbox__data__text1 {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    line-height: 10px;
+  } 
+
+  .inbox__data__text2 {
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    line-height: 12px;
+  }
+
+  .inbox__data__inforight {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .inbox__data__infopic {
+    width: 2.67px;
+    height: 15px;
+  }
+
+  .message__dialog__header {
+    padding-bottom: 10px;
+  }
+
+  .dialog__header__pic {
+    margin-left: 10px;
+    margin-right: 17px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .dialog__header__text1 {
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+
+  .dialog__header__text2 {
+    font-size: 11px;
+    line-height: 15px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  .dialog__header__three {
+    width: 2.67px;
+    height: 16px;
+    margin-left: 10px;
+  }
+
+  .message__dialog__hmain {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .message__dialog__bottom {
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .dialog__bottom__input {
+    padding: 0px 4px;
+    height: 50px;
+  }
+
+  .dialog__input__info {
+    font-size: 14px;
+  }
+
+  .plusimg__setting {
+    width: 14.5px;
+    height: 14.5px;
+  }
+
+  .smileimg__setting {
+    margin-left: 8.75px;
+    width: 19px;
+    height: 19px;
+  }
+
+  .mikeimg__setting {
+    margin-right: 10px;
+    margin-left: 9.32px;
+    width: 12.36px;
+    height: 17.5px;
+  }
+
+  .dialog__bottom__button {
+    margin-left: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}

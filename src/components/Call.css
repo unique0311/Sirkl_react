@@ -1,7 +1,15 @@
+:root {
+  --call-title-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --call-title-dm: #ffffff;
+  --call-scroll-lm: #f4f4f4;
+  --call-scroll-dm: #00000033;
+}
+
 .call {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -18,7 +26,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--call-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -33,20 +41,20 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   overflow: auto;
-  height: 710px;
 }
 
 
 .call__data::-webkit-scrollbar-track
 {
-	background-color: #f4f4f4;
+	background-color: var(--call-scroll);
 }
 
 .call__data::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #f4f4f4;
+	background-color: var(--call-scroll);
 }
 
 .call__data::-webkit-scrollbar-thumb
@@ -61,6 +69,17 @@
     flex-direction: column;
     width: 100%;
     overflow: auto;
-    height: 650px;
+  }
 }
+
+@media (max-width: 540px) {
+  .call__title__left {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .call__title__right {
+    width: 2.67px;
+    height: 16px;
+  }
 }

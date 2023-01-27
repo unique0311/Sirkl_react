@@ -2,27 +2,35 @@ import './Compose.css';
 import { Link } from 'react-router-dom';
 
 import backimg from '../assets/images/back.png';
+import backdarkimg from '../assets/images/backdark.png';
 import recycleimg from '../assets/images/recycle.png';
 import attachimg from '../assets/images/attach.png';
 import galleryimg from '../assets/images/gallery.png';
 import plusimg from '../assets/images/plus.png';
 import smileimg from '../assets/images/smile.png';
 import threeimg from '../assets/images/three.png';
+import threedarkimg from '../assets/images/threedark.png';
 import divideimg from '../assets/images/divide.png';
- 
+import { useSelector } from 'react-redux'; 
+
 const Compose = () => {
+  const mode = useSelector(state => state.supply.value);
+
   return (
-    <div className='compose'>
+    <div className='compose' style={mode ? {
+      "--compose-text": "var(--compose-text-dm)", "--compose-bg": "var(--compose-bg-dm)", "--compose-input-color" : "var(--compose-input-color-dm)"
+    }
+      : { "--compose-text": "var(--compose-text-lm)", "--compose-bg": "var(--compose-bg-lm)", "--compose-input-color": "var(--compose-input-color-lm" }}>
       <div className='compose__title'>
         <div className='compose__title__left'>
           <Link to="/main/inbox" >
-            <img src={backimg} className="backimg__setting" />
+            <img src={mode ? backdarkimg: backimg} className="backimg__setting" />
           </Link>
           <p className='compose__left__text'>New Message</p>
         </div>
         <div className='compose__title__right'>
           <img src={recycleimg} className="recycleimg__setting" />
-          <img src={threeimg} className="threeimg__setting" />
+          <img src={mode ? threedarkimg: threeimg} className="threeimg__setting" />
         </div>
       </div>
       <div className='compose__sendto'>

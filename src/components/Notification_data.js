@@ -1,12 +1,13 @@
 import './Notification.css';
-import { useState } from 'react';
 import profilelogo1 from '../assets/images/profile_1.png';
 import threeicon from '../assets/images/three.png';
+import threedarkicon from '../assets/images/threedark.png';
 import backicon from '../assets/images/back_red.png';
 import oneicon from '../assets/images/one.png';
-
+import { useSelector } from 'react-redux';
 
 const Notification_data = () => {
+  const mode = useSelector(state => state.supply.value)
   return (
     <div className='notification__details__pro'>
       <div className='notification__detail__left'>
@@ -22,7 +23,7 @@ const Notification_data = () => {
           </div>
           <p className="notification__right__text">2 mins ago</p>
         </div>
-        <img src={threeicon} className="notification__right__pic" />
+        <img src={mode ? threedarkicon : threeicon} className="notification__right__pic" />
       </div>
     </div>
   )

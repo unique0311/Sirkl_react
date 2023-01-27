@@ -11,6 +11,7 @@ import outgoingicon from '../assets/images/outgoing.png';
 import incomingicon from '../assets/images/incoming.png';
 import missedicon from '../assets/images/missed.png';
 import threeicon from '../assets/images/three.png';
+import threedarkicon from '../assets/images/threedark.png';
 import profile1 from '../assets/images/profile_1.png';
 import profile2 from '../assets/images/profile_2.png';
 import profile3 from '../assets/images/profile_3.png';
@@ -18,26 +19,30 @@ import profile4 from '../assets/images/profile_4.png';
 import phoneimg from '../assets/images/phone.png';
 import messageimg from '../assets/images/message_small.png';
 
+import { useSelector } from 'react-redux';
+
 export const Inbox_1 = ({onClick}) => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info' onClick={onClick}>
-      <div className='inbox__data__infoleft'>
-        <input type="checkbox" className="inbox__left__checkbox" />
-        <img src={nft2} className="inbox__data__pic" />
-        <div className='inboxdata__text'>
-          <p className='inbox__data__text1'>8x9Fx224</p>
-          <p className='inbox__data__text2'>Find out who is charge of this portion of the process</p>
+      <div className='inbox__data__info' onClick={onClick}>
+        <div className='inbox__data__infoleft'>
+          <input type="checkbox" className="inbox__left__checkbox" />
+          <img src={nft2} className="inbox__data__pic" />
+          <div className='inboxdata__text'>
+            <p className='inbox__data__text1'>8x9Fx224</p>
+            <p className='inbox__data__text2'>Find out who is charge of this portion of the process</p>
+          </div>
+        </div>
+        <div className='inbox__data__right'>
+          <p className='inbox__data__inforight'>2 mins ago</p>
+          <img src={mode? threedarkicon: threeicon} className="inbox__data__infopic" />
         </div>
       </div>
-      <div className='inbox__data__right'>
-        <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
-      </div>
-    </div>
   )
 };
 
 export const Inbox_2 = ({onClick}) => {
+  const mode = useSelector(state => state.supply.value);
   return (
     <div className='inbox__data__info1' onClick={onClick}>
       <div className='inbox__data__infoleft'>
@@ -53,9 +58,10 @@ export const Inbox_2 = ({onClick}) => {
   )
 }
 
-export const Group_1 = () => {
+export const Group_1 = ({onClick}) => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' onClick={onClick} style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={nft1} className="inbox__data__pic" />
         <p className='inbox__data__text1'>CloneX</p>
@@ -63,15 +69,16 @@ export const Group_1 = () => {
       </div>
       <div className='inbox__data__right'>
         <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon:threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )
 };
 
-export const Group_2 = () => {
+export const Group_2 = ({onClick}) => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' onClick={onClick} style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={nft4} className="inbox__data__pic" />
         <p className='inbox__data__text1'>Bored Ape Yacht Club</p>
@@ -82,15 +89,16 @@ export const Group_2 = () => {
           <p className='badge__format'>02</p>
         </div>
         <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon:threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )
 };
 
 export const Call_Incoming = () => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={nft6} className="inbox__data__pic" />
         <p className='inbox__data__text1'>Jenny Welson</p>
@@ -102,15 +110,16 @@ export const Call_Incoming = () => {
           <p className='badge__format'>02</p>
         </div>
         <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon: threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )
 };
 
 export const Call_Outgoing = () => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={nft5} className="inbox__data__pic" />
         <p className='inbox__data__text1'>Savannah Nguyen</p>
@@ -119,15 +128,16 @@ export const Call_Outgoing = () => {
       </div>
       <div className='inbox__data__right'>
         <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon: threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )
 };
 
 export const Call_Missed = () => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={nft7} className="inbox__data__pic" />
         <p className='inbox__data__text1'>Daniel Russell</p>
@@ -136,15 +146,16 @@ export const Call_Missed = () => {
       </div>
       <div className='inbox__data__right'>
         <p className='inbox__data__inforight'>2 mins ago</p>
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon: threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )
 };
 
 export const Mysirkl_Favorite = () => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='favorite__container'>
+    <div className='favorite__container' style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <img src={profile2} className="favorite__container__img" />
       <p className='favorite__container__name'>Ronny</p>
     </div>
@@ -152,8 +163,9 @@ export const Mysirkl_Favorite = () => {
 }
 
 export const Mysirkl_Info = () => {
+  const mode = useSelector(state => state.supply.value);
   return (
-    <div className='inbox__data__info'>
+    <div className='inbox__data__info' style={mode ? {"--inbox-text": "var(--inbox-text-dm)"} : {"--inbox-text": "var(--inbox-text-lm)"}}>
       <div className='inbox__data__infoleft'>
         <img src={profile3} className="inbox__data__pic" />
         <p className='inbox__data__text1'>Jenny Wilson</p>
@@ -162,7 +174,7 @@ export const Mysirkl_Info = () => {
       <div className='inbox__data__right'>
         <img src={phoneimg} className='phoneimg__setting' />
         <img src={messageimg} className='messageimg__setting' />
-        <img src={threeicon} className="inbox__data__infopic" />
+        <img src={mode? threedarkicon: threeicon} className="inbox__data__infopic" />
       </div>
     </div>
   )

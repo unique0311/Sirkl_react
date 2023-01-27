@@ -1,15 +1,18 @@
 import './Notification.css';
 import messageicon from '../assets/images/message.png';
 import threeicon from '../assets/images/three.png';
-import carimage from '../assets/images/car.png';
+import threedarkicon from '../assets/images/threedark.png';
 import leafimage from '../assets/images/leaf.png';
 import laptopimage from '../assets/images/laptop.png';
 
 import Notification_data from './Notification_data';
+import { useSelector } from 'react-redux';
 
 const Notification = () => {
+  const mode = useSelector(state => state.supply.value);
+
   return (
-    <div className='notification'>
+    <div className='notification' style={mode ? {"--notification-text": "var(--notification-text-dm)", "--notification-scroll": "var(--notification-scroll-dm)"} : {"--notification-text": "var(--notification-text-lm)", "--notification-scroll": "var(--notification-scroll-lm)"}}>
       <div className='notification__title'>Notifications</div>
       <div className='notification__detail'>
         <Notification_data />
@@ -26,7 +29,7 @@ const Notification = () => {
             </div>
             <div className='notification__detail__right'>
               <p className="notification__right__text">2 min ago</p>
-              <img src={threeicon} className="notification__right__pic" />
+              <img src={mode ? threedarkicon : threeicon} className="notification__right__pic" />
             </div>
           </div>
           <div className='notification__detailspro__down'>

@@ -1,6 +1,15 @@
+:root {
+  --recieve-message-bg-lm: #ffffff;
+  --recieve-message-bg-dm: #00000033;
+  --recieve-message-text-lm: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  --recieve-message-text-dm: #ffffff;
+  --send-message-bg-lm: #ECFFF8;
+  --send-message-bg-dm: #1A2E40B2;
+}
+
 .recievemessage {
   padding: 15px 20px;
-  background: #ffffff;
+  background: var(--recieve-message-bg);
   backdrop-filter: blur(2px);
   border-radius: 0px 15px 15px;
   display: flex;
@@ -46,11 +55,11 @@
 .recieve__message__detail {
   font-family: 'Gilory';
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--recieve-message-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -78,7 +87,7 @@
   justify-content: center;
   align-items: flex-end;
   padding: 15px 20px;
-  background: #ECFFF8;
+  background: var(--send-message-bg);
   border: 1px solid rgba(0, 203, 125, 0.2);
   border-radius: 15px 0px 15px 15px;
   max-width: 65%;
@@ -88,12 +97,12 @@
   font-family: 'Gilory';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
   display: flex;
   align-items: center;
   text-align: left;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--recieve-message-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -150,8 +159,58 @@
   display: flex;
   align-items: flex-end;
   text-align: center;
-  background: linear-gradient(180deg, #102437 0%, #13171B 100%);
+  background: var(--recieve-message-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+@media (max-width: 460px) {
+  .recievemessage {
+    padding: 10px 15px;
+  }
+
+  .sending__message__address {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .recieve__message__detail {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .recievemessage__date {
+    font-size: 12px;
+  }
+
+  .crosstime__medium {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .sendmessage {
+    padding: 10px 15px;
+  }
+
+  .send__message {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .sending__message {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .sending__message__time {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .sending__message__Status {
+    width: 13.42px;
+    height: 8.02px;
+  }
+
 }
